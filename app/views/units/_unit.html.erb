@@ -1,0 +1,10 @@
+
+<div class="border" style=" outline: 1px groove #010;">
+
+	<h3><%=link_to unit.title, unit_path(unit.id) %></h3>
+<small>
+			<time><%= unit.created_at.to_date.strftime("%d %B, %Y") %></time>
+</small>
+<p><%= unit.shortbody %></p>
+
+</div>

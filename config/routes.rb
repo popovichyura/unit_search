@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  devise_for :users
   root to: 'pages#index'
+  
+  devise_for :users
+  
+  get "/categories/:id", to: "units#categories", as: "categories"    
+
+  resources :units
 
   resources :userparams
 
