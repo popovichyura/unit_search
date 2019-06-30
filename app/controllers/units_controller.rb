@@ -34,7 +34,7 @@ class UnitsController < ApplicationController
   private
 
   def unit_params
-    params.require(:unit).permit(:title, :shortbody, :body, :price, :category_id, :user_id)
+    params.require(:unit).permit(:title, :shortbody, :body, :price, :category_id, :user_id, :count)
   end
 
   def set_unit
